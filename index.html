@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSIS UPT SMKN 6 PINRANG</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-image: url('https://via.placeholder.com/1920x1080/333/000?text=Latar+Belakang');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      text-align: center;
+      flex: 1;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #16a085;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #16a085;
+      min-width: 160px;
+      z-index: 10;
+    }
+
+    nav li:hover .submenu {
+      display: block;
+    }
+
+    main {
+      padding: 30px;
+      display: none;
+    }
+
+    main.active {
+      display: block;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      padding: 15px;
+    }
+
+    img {
+      max-width: 100%;
+      margin-bottom: 15px;
+      border: 3px solid #fff;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <img src="logo-kiri.png" alt="Logo Kiri" class="logo">
+      <h1>OSIS UPT SMKN 6 PINRANG</h1>
+      <img src="logo-kanan.png" alt="Logo Kanan" class="logo">
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showContent('beranda')">Beranda</a></li>
+        <li>
+          <a href="#">Tentang</a>
+          <ul class="submenu">
+            <li><a href="#" onclick="showContent('visi')">Visi</a></li>
+            <li><a href="#" onclick="showContent('misi')">Misi</a></li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="showContent('struktur')">Struktur</a></li>
+        <li><a href="#" onclick="showContent('program')">Program</a></li>
+        <li>
+          <a href="#">Galeri</a>
+          <ul class="submenu">
+            <li><a href="#" onclick="showContent('galeri')">Kegiatan</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Dokumen</a>
+          <ul class="submenu">
+            <li><a href="#" onclick="showContent('dokumen')">File OSIS</a></li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="showContent('kontak')">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <main id="beranda" class="active">
+      <h2>Beranda</h2>
+      <p>Selamat datang di Website Resmi OSIS SMK Negeri Maju.</p>
+    </main>
+
+    <main id="visi">
+      <h2>Visi</h2>
+      <p>Menjadi organisasi siswa yang aktif, kreatif, dan berjiwa kepemimpinan tinggi.</p>
+    </main>
+
+    <main id="misi">
+      <h2>Misi</h2>
+      <ul>
+        <li>Melatih kemampuan organisasi dan komunikasi siswa.</li>
+        <li>Mengembangkan minat dan bakat siswa.</li>
+        <li>Menumbuhkan rasa tanggung jawab terhadap lingkungan sekolah.</li>
+      </ul>
+    </main>
+
+    <main id="struktur">
+      <h2>Struktur Organisasi OSIS</h2>
+      <ul>
+        <li>Ketua: Rifki Ramadhan</li>
+        <li>Wakil Ketua: Lestari Ayu</li>
+        <li>Sekretaris: Rani Pratiwi</li>
+        <li>Bendahara: Aditya Yoga</li>
+      </ul>
+    </main>
+
+    <main id="program">
+      <h2>Program Kerja OSIS</h2>
+      <p>Program-program OSIS meliputi kegiatan tahunan seperti LDKS, pentas seni, dan kegiatan sosial.</p>
+    </main>
+
+    <main id="galeri">
+      <h2>Galeri Kegiatan OSIS</h2>
+      <img src="https://via.placeholder.com/600x300?text=LDKS+2025" alt="LDKS">
+      <img src="https://via.placeholder.com/600x300?text=Pentas+Seni+2025" alt="Pentas Seni">
+    </main>
+
+    <main id="dokumen">
+      <h2>Dokumen OSIS</h2>
+      <ul>
+        <li><a href="#">SK Pengurus OSIS 2025 (PDF)</a></li>
+        <li><a href="#">Laporan Keuangan Semester 1 (PDF)</a></li>
+        <li><a href="#">Notulen Rapat Bulan Januari (PDF)</a></li>
+      </ul>
+    </main>
+
+    <main id="kontak">
+      <h2>Kontak OSIS</h2>
+      <p>Email: osis@smkmaju.sch.id</p>
+      <p>Instagram: @osis_smkmaju</p>
+      <p>Alamat: Jl. Pendidikan Garungga</p>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 OSIS SMK Negeri Maju. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function showContent(id) {
+      document.querySelectorAll("main").forEach(function (el) {
+        el.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
